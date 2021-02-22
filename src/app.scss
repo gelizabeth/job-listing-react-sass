@@ -1,0 +1,18 @@
+@import './sass/config';
+
+.App{
+    background-color: $light-grayish-cyan-bg;
+    &__header{
+        height: 155px;
+        background: url('./img/bg-header-mobile.svg'), $desaturated-dark-cyan;
+    }
+}
+@include media-xl{
+    .App{
+        &__header{
+            height: 155px;
+            background: url('./img/bg-header-desktop.svg'), $desaturated-dark-cyan;
+        }
+    }
+    
+}

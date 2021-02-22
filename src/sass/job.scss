@@ -1,0 +1,145 @@
+@import './config';
+
+.job {
+    background-color: #fff;
+    height: 258px;
+    margin: 2.5rem 0;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px 0px rgba($desaturated-dark-cyan, 0.3);
+    padding: 1.6rem;
+    position: relative;
+    max-width: 1100px;
+
+    &_featured {
+        background: linear-gradient(to right, $desaturated-dark-cyan 5px, #fff 5px 100%);
+    }
+
+    &__logo {
+        position: absolute;
+
+        top: -1.6rem;
+
+        img {
+            width: 47px;
+            height: 47px;
+        }
+    }
+
+    &__company {
+        color: $desaturated-dark-cyan;
+        font-size: 0.8rem;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0.3rem 0;
+
+        span {
+            padding: 0.5rem 0.5rem 0.3rem;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.7rem;
+            border-radius: 50px;
+            margin-left: 0.8rem;
+            &.new {
+                background-color: $desaturated-dark-cyan;
+            }
+
+            &.featured {
+                background-color: $very-dark-grayish-cyan;
+            }
+        }
+    }
+    &__position{
+        margin: 0.5rem 0.1rem;
+        font-weight: 700;
+        color: $very-dark-grayish-cyan;
+        @include transition-ease;
+        cursor: pointer;
+        &:hover{
+            color: $desaturated-dark-cyan;
+        }
+    }
+    &__details{
+        margin: 1rem 0.2rem;
+        color: $dark-grayish-cyan;
+        display: flex;
+        font-size: 0.9rem;
+        letter-spacing:0.18mm;
+        div{
+            margin: 0 0.1rem;
+        }
+        div:nth-of-type(2)::before{
+            content: '• ';
+            height: 3px;
+            width: 3px;
+            color: $dark-grayish-cyan;
+        }
+        div:nth-of-type(2)::after{
+            content: ' •';
+            height: 3px;
+            width: 3px;
+            color: $dark-grayish-cyan;
+            
+        }
+    }
+    &__tags{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1.4rem 0;
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: $desaturated-dark-cyan;
+        border-top: rgba($dark-grayish-cyan, 0.5) 1px solid;
+        
+        .job__tag{
+            margin: 0 1rem 1rem 0;
+            padding: 0.6rem 0.6rem 0.5rem;
+            background-color: $light-grayish-cyan-filter;
+            border-radius: 5px;
+            cursor: pointer;
+            @include transition-ease;
+            &:hover{
+                background-color: $desaturated-dark-cyan;
+                color: $light-grayish-cyan-filter;
+            }
+        }
+    }
+}
+@include media-xl{
+    .job{
+        margin: 2rem auto;
+        display: flex;
+        height: unset;
+        align-content: center;
+        // justify-content: space-between;
+        &__logo{
+            flex: 0.1;
+            position: relative;
+            top: unset;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+        }
+        &__container{
+            flex: 0.3;
+            margin-left: 1rem;
+        }
+        &__tags{
+            flex: 0.6;
+            border-top: none;
+            // height: 2rem;
+            align-content: center;
+            justify-content: flex-end;
+            .job__tag{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
