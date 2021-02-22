@@ -9,6 +9,7 @@
     padding: 1.6rem;
     position: relative;
     max-width: 1100px;
+    min-width: 375px;
 
     &_featured {
         background: linear-gradient(to right, $desaturated-dark-cyan 5px, #fff 5px 100%);
