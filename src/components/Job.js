@@ -33,8 +33,8 @@ const Job = ({job, onFilterClick}) => {
             </div>
             
             <div className="job__tags">
-                <div className="job__tag" value={job.role} onClick={selectFilter}>{job.role}</div>
-                <div className="job__tag" value={job.level} onClick={selectFilter}>{job.level}</div>
+                <div className="job__tag"  onClick={selectFilter}>{job.role}</div>
+                <div className="job__tag"  onClick={selectFilter}>{job.level}</div>
                 {job.languages?.map((language, index) => <div key={index} className="job__tag"  onClick={selectFilter}>{language}</div>)}
                 {job.tools?.map((tool, index )=> <div key={index} className="job__tag" onClick={selectFilter}>{tool}</div>)}
             </div>
